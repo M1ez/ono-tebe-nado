@@ -1,0 +1,278 @@
+*
+	font-family: 'Raleway', sans-serif
+
+.address
+	padding-bottom: 2px
+	font-style: normal
+	font-weight: 400
+	font-size: 18px
+	line-height: 24px
+	color: #000000
+	text-underline-offset: 4px
+	max-width: 240px
+
+body
+	margin: 0
+	min-width: 1440px
+
+.header
+	min-height: 293px
+	display: flex
+	padding: 92px 50px
+	justify-content: space-between
+	align-items: center
+	.menu
+		display: flex 
+		list-style: circle
+		font-style: normal
+		font-weight: 400
+		font-size: 18px
+		color: #000000
+		&_item
+			padding-bottom: 2px
+			margin-right: 30px
+			text-underline-offset: 5px
+			&:first-child
+				list-style: none
+		&_item:first-child
+			.menu_link
+				text-decoration: none
+	.logo
+		margin-right: 170px
+		padding-bottom: 3px
+	.logo img
+		display: block
+		width: 148px
+		height: 105px
+	
+
+.cover
+	background-image: url('../images/cover.jpg') 
+	background-size: cover
+	padding: 165px 50px 50px 50px
+	position: relative
+	z-index: 0
+	&::before
+		content: ""
+		position: absolute
+		inset: 0
+		width: 100%
+		height: 100%
+		opacity: 0.6
+		background: #000
+	&_title
+		position: relative
+		display: flex
+		font-style: normal
+		font-weight: 700
+		font-size: 100px
+		line-height: 115%
+		text-transform: uppercase
+		color: #FFFFFF
+		flex-direction: column
+		z-index: 2
+	.aligned-text
+		display: flex
+		letter-spacing: 2rem
+		&_center
+			display: flex
+			justify-content: center
+			letter-spacing: 2rem
+			margin-top: 13px
+		&_right
+			margin-top: 5px
+			display: flex
+			justify-content: flex-end
+			letter-spacing: 2rem
+	.letter-spacing-extended
+		letter-spacing: 4rem
+	.no-letter-spacing
+		letter-spacing: 0
+	&_description
+		position: relative
+		margin-top: 126px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		z-index: 2
+		&-text
+			padding-top: 2px
+			padding-right: 78px
+			font-style: normal
+			font-weight: 400
+			font-size: 22px
+			text-transform: uppercase
+			color: #FFFFFF
+			word-spacing: 18px
+		.bet-button
+			font-style: normal
+			font-weight: 400
+			font-size: 22px
+			line-height: 26px
+			text-align: center
+			text-transform: uppercase
+			color: #FFFFFF
+			background: transparent
+			border: 1px solid #fff
+			padding: 0
+			width: 257px
+			height: 52px 
+			// Не используй никогда только фиксированную 
+			//ширину или высоту. Либо юзай её вместе с min/max-width/height  
+.lots
+	margin: 180px 50px
+	&_heading
+		margin-left: 40px
+		font-style: normal
+		font-weight: 700
+		font-size: 40px
+		line-height: 47px
+		text-transform: uppercase
+		color: #000000
+		padding-top: 2px
+	&_card-list
+		margin-top: 26px
+		margin-bottom: 30px
+		display: flex
+		&-item
+			width: 430px
+			min-height: 450px
+			position: relative
+			flex-grow: 1
+			margin-right: 25px
+			&:last-child
+				margin-right: 0
+	.card
+		height: 100%
+		width: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		&::before
+			content: ""
+			position: absolute
+			inset: 0
+			width: 100%
+			height: 100%
+			opacity: 0.6
+			background: #000
+		&-link
+			text-decoration: none
+			position: relative
+		&_type
+			&_film
+				background-image: url('../images/card-lot-01.jpg')
+				background-size: cover
+			&_book
+				background-image: url('../images/card-lot-02.jpg')
+				background-size: cover
+			&_picture
+				background-image: url('../images/card-lot-03.jpg')
+				background-size: cover
+		&_title
+			padding: 50px 40px 0 40px
+			font-style: normal
+			font-weight: 700
+			font-size: 22px
+			line-height: 26px
+			text-decoration-line: underline
+			text-transform: uppercase
+			color: #FFFFFF
+			z-index: 2
+		&_text
+			padding: 0 40px 50px 40px
+			font-style: normal
+			font-weight: 400
+			font-size: 20px
+			line-height: 24px
+			color: #FFFFFF
+			z-index: 2
+	&_look-more-link
+		font-style: normal
+		font-weight: 400
+		font-size: 20px
+		line-height: 23px
+		color: #000000
+		margin-left: 40px
+		text-underline-offset: 5px
+		
+.about
+	margin-top: 182px
+	margin-bottom: 149px
+	padding: 0 50px
+	&_column		
+		display: grid
+		grid-template-areas: "logo title" ". text"
+		grid-template-columns: 430px 1fr
+		grid-template-rows: auto auto
+		gap: 0 25px
+	&_logo 
+		display: flex
+		justify-self: center
+		justify-content: center
+		align-items: center
+		grid-area: logo
+		background-color: #000
+		border-radius: 100%
+		width: 240px
+		height: 240px
+	&_logo img
+		width: 148px
+		height: 114px
+	&_title
+		font-style: normal
+		font-weight: 700
+		font-size: 40px
+		text-transform: uppercase
+		color: #000000
+		display: flex
+		align-items: center
+		padding-top: 9px
+		grid-area: title
+	&_text
+		margin-top: 9px
+		font-style: normal
+		font-weight: 400
+		font-size: 20px
+		line-height: 23px
+		color: #000000
+		grid-area: text
+		min-height: 240px
+		p
+			margin-bottom: 30px
+
+.footer
+	padding: 3px 50px 90px 50px
+	display: flex
+	justify-content: space-between
+	&_address
+		padding-top: 1px
+	&_menu_list
+		display: flex
+		list-style: none
+		flex-direction: column		
+		align-items: center
+		text-underline-offset: 4px
+		font-style: normal
+		font-weight: 400
+		font-size: 18px
+		line-height: 21px
+		text-align: center
+		color: #000000
+		margin-left: 52px				
+		&-item:active 
+			.footer_menu_link_active
+				text-decoration: underline		
+	&_menu_link
+		text-decoration: none
+		&_active
+			&:focus
+				text-decoration: underline
+				transition: 0.4s all
+	&_social-list
+		list-style: none
+		display: flex
+		&-item 
+			width: 48px
+			height: 48px
+			margin-left: 48px
